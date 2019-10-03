@@ -23,15 +23,15 @@ app.get('/list', (req, res) => {
     res.send(w);
 });
 
-// app.getUsers('/users', (req, res) => {
-//     console.log(req.query);
-//
-//     const { firstName } = req.query;
-//
-//     const m = getUsers(data, firstName);
-//
-//     res.send(m);
-// });
+app.get('/users', (req, res) => {
+    console.log(req.query);
+
+    const { firstName } = req.query;
+
+    const m = getUsers(data, firstName);
+
+    res.send(m);
+});
 
 // TODO метод обработки запроса здесь
 

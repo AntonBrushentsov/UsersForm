@@ -36,38 +36,3 @@ users = [{ firstName: 'test', secondName: 'testovich' }, ..., ..., ...],
 рендре это обычная функция, пусть вас не смущает реакт(обычный if else)
 
 ++14) Посмотрите TODO (по глобальному поиску в проекте ), они подскажут где что писать
-
-
-// import {getUsers} from "../sources/users";
-// import UserList from "./UserList";
-
-// class UserList extends Component {
-//     constructor(props) {
-//         super(props);
-//
-//         this.state = {
-//             user: [],
-//         };
-//     }
-//
-//     componentDidMount() {
-//
-//         console.log('Выполняем getUser: ', getUsers());
-//
-//         getUsers({count: this.state.user})
-//             .then(({data}) => this.setState({user: data}));
-//     }
-//
-//     render() {
-//         const {user} = this.state;
-//
-//         return (
-//             <div>
-//                 <h3>Список пользователей</h3>
-//                 <UserList users={user}/>
-//
-//                 {/*TODO рендер компонента здесь*/}
-//             </div>
-//         );
-//     }
-// }

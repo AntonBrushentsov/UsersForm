@@ -8,6 +8,6 @@ const getUsers = (data, firstName) => {
 // TODO функция c двумя параметрами getUsers(data, firstName)
 
 module.exports = {
-    getData,
+    // getData,
     getUsers
 };

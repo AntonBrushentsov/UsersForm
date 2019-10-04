@@ -1,7 +1,7 @@
 const { join } = require('path');
 const express = require('express');
 const { getData } = require('./utils');
-const { data } = require('./data.js');
+const { users } = require('./data.js');
 const { getUsers } = require('./utils');
 
 const app = express();
@@ -13,7 +13,6 @@ app.get('/', (req, res) => {
 });
 
 app.get('/list', (req, res) => {
-    console.log(req.query);
 
     const { count } = req.query;
 
@@ -24,11 +23,10 @@ app.get('/list', (req, res) => {
 });
 
 app.get('/users', (req, res) => {
-    console.log(req.query);
 
     const { firstName } = req.query;
 
-    const m = getUsers(data, firstName);
+    const m = getUsers(users, firstName);
 
     res.send(m);
 });

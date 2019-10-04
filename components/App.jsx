@@ -13,7 +13,7 @@ class App extends Component {
             // list: [],
             // count: 6,
             users: [],
-            firstName: 'И'
+            // firstName: ''
 
         };
     }
@@ -26,23 +26,25 @@ class App extends Component {
         // const { count } = this.state;
 
         // const params = { count };
-        // console.log('PROMISE: ', getList());
+        // console.log('PROMISE: ', getUsers());
 
         // getList({ count: this.state.count })
         //     .then(({ data }) => this.setState({ list: data }));
         getUsers ({firstName: this.state.firstName})
                .then(({ data }) => this.setState({users: data }));
+
     }
 
     render() {
         const { users } = this.state;
+        console.log (users);
 
         return (
             <div>
                 <h3>Список пользователей</h3>
                 {/*<List list={list}/>*/}
                 <UserList users={users} />
-                {/*if ()*/}
+
                 {/*TODO рендер компонента здесь*/}
             </div>
         );
